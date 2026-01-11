@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layanan DPMPTSP Maluku Tenggara</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+<style>
+/* Header (gambar jembatan) */
+.bg-hero {
+  background-image: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1200&q=60');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Body (pantai Ngurbloat) */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('images/pantai_ngurbloat.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Modal background blur */
+.modal-bg {
+  background: rgba(0,0,0,0.6);
+}
+</style>
+</head>
+<body class="text-gray-800">
+
+<!-- HERO -->
+<header class="bg-hero h-[300px] flex items-center justify-center text-center relative z-10">
+  <div class="bg-black/50 p-6 rounded-xl">
+    <h1 class="text-3xl md:text-4xl font-bold text-white">Layanan DPMPTSP Maluku Tenggara</h1>
+    <p class="mt-2 text-white text-sm md:text-lg opacity-90">Pelayanan perizinan & penanaman modal untuk masyarakat dan investor</p>
+  </div>
+</header>
+
+<!-- NAVBAR -->
+<nav class="bg-blue-600 shadow-md relative z-10">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-wrap justify-center gap-4 py-3">
+      <a href="index.html" class="text-white px-3 py-1 font-medium hover:text-blue-200 transition">Beranda</a>
+      <a href="profil.html" class="text-white px-3 py-1 font-medium hover:text-blue-200 transition">Profil</a>
+      <a href="layanan.html" class="text-blue-200 px-3 py-1 font-medium border-b-2 border-white/70">Layanan</a>
+      <a href="https://oss.go.id" target="_blank" class="text-white px-3 py-1 font-medium hover:text-blue-200 transition">OSS</a>
+      <a href="berita.html" class="text-white px-3 py-1 font-medium hover:text-blue-200 transition">Berita</a>
+      
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="max-w-6xl mx-auto px-6 py-12 space-y-12 relative z-10">
+
+  <!-- Layanan Perizinan -->
+  <section class="relative rounded-2xl shadow-lg overflow-hidden bg-white/30 backdrop-blur-sm p-8">
+    <h2 class="text-2xl font-bold text-blue-700 mb-6 text-center">Layanan Perizinan</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Izin Usaha -->
+      <div data-aos="fade-up" class="bg-white/90 rounded-2xl shadow p-6 text-center hover:scale-105 transition cursor-pointer" onclick="openModal('izinUsaha')">
+        <i class="fas fa-file-alt text-4xl text-blue-700 mb-4"></i>
+        <h3 class="font-bold text-blue-700 mb-2">Izin Usaha</h3>
+        <p class="text-gray-700 text-sm">Pelayanan perizinan usaha berbasis digital dan cepat.</p>
+      </div>
+      <!-- Izin Lingkungan -->
+      <div data-aos="fade-up" data-aos-delay="100" class="bg-white/90 rounded-2xl shadow p-6 text-center hover:scale-105 transition cursor-pointer" onclick="openModal('izinLingkungan')">
+        <i class="fas fa-file-signature text-4xl text-blue-700 mb-4"></i>
+        <h3 class="font-bold text-blue-700 mb-2">Izin Lingkungan</h3>
+        <p class="text-gray-700 text-sm">Pengajuan dan monitoring izin lingkungan sesuai regulasi.</p>
+      </div>
+      <!-- Izin Non-Usaha -->
+      <div data-aos="fade-up" data-aos-delay="200" class="bg-white/90 rounded-2xl shadow p-6 text-center hover:scale-105 transition cursor-pointer" onclick="openModal('izinNonUsaha')">
+        <i class="fas fa-file-invoice text-4xl text-blue-700 mb-4"></i>
+        <h3 class="font-bold text-blue-700 mb-2">Izin Non-Usaha</h3>
+        <p class="text-gray-700 text-sm">Pelayanan izin non-usaha seperti kegiatan sosial dan non-komersial.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Layanan Penanaman Modal -->
+  <section class="relative rounded-2xl shadow-lg overflow-hidden bg-white/30 backdrop-blur-sm p-8">
+    <h2 class="text-2xl font-bold text-blue-700 mb-6 text-center">Layanan Penanaman Modal</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Promosi Investasi -->
+      <div data-aos="fade-up" class="bg-white/90 rounded-2xl shadow p-6 text-center hover:scale-105 transition cursor-pointer" onclick="openModal('promosiInvestasi')">
+        <i class="fas fa-chart-line text-4xl text-blue-700 mb-4"></i>
+        <h3 class="font-bold text-blue-700 mb-2">Promosi Investasi</h3>
+        <p class="text-gray-700 text-sm">Mempromosikan peluang investasi di Kabupaten Maluku Tenggara.</p>
+      </div>
+      <!-- Kemitraan Investor -->
+      <div data-aos="fade-up" data-aos-delay="100" class="bg-white/90 rounded-2xl shadow p-6 text-center hover:scale-105 transition cursor-pointer" onclick="openModal('kemitraanInvestor')">
+        <i class="fas fa-handshake text-4xl text-blue-700 mb-4"></i>
+        <h3 class="font-bold text-blue-700 mb-2">Kemitraan Investor</h3>
+        <p class="text-gray-700 text-sm">Fasilitasi kerjasama antara investor dan pelaku usaha lokal.</p>
+      </div>
+      <!-- Pengawasan Investasi -->
+      <div data-aos="fade-up" data-aos-delay="200" class="bg-white/90 rounded-2xl shadow p-6 text-center hover:scale-105 transition cursor-pointer" onclick="openModal('pengawasanInvestasi')">
+        <i class="fas fa-globe text-4xl text-blue-700 mb-4"></i>
+        <h3 class="font-bold text-blue-700 mb-2">Pengawasan Investasi</h3>
+        <p class="text-gray-700 text-sm">Monitoring dan evaluasi investasi agar sesuai regulasi dan tujuan daerah.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-blue-900 text-white text-center py-8 relative z-10">
+  <p class="text-sm">📍 Jl. Merdeka Raya – Watdek, Langgur, Kabupaten Maluku Tenggara</p>
+  <p class="text-sm">☎ (0916) 21045</p>
+  <div class="w-24 h-px bg-white/40 mx-auto my-4"></div>
+  <div class="flex flex-wrap justify-center items-center gap-4 text-sm">
+    <a href="mailto:dpmptsp@malukutenggarakab.go.id" class="hover:underline"><i class="fas fa-envelope"></i> Email</a>
+    <span class="opacity-50">|</span>
+    <a href="https://facebook.com/dpmptspmalukutenggara" target="_blank" class="hover:underline"><i class="fab fa-facebook"></i> Facebook</a>
+    <span class="opacity-50">|</span>
+    <a href="https://instagram.com/dpmptspmalukutenggara" target="_blank" class="hover:underline"><i class="fab fa-instagram"></i> Instagram</a>
+  </div>
+  <p class="mt-4 text-xs opacity-80">© 2025 DPMPTSP Kabupaten Maluku Tenggara</p>
+</footer>
+
+<!-- HELPDESK -->
+<a href="https://wa.me/6281386824618" class="fixed bottom-6 right-6 z-50">
+  <img src="img/helpdesk.jpg" class="w-16 h-16 rounded-full shadow-lg hover:scale-110 transition animate-pulse">
+</a>
+
+<!-- Modals -->
+<div id="modalContainer" class="fixed inset-0 hidden items-center justify-center modal-bg z-50">
+  <div class="bg-white rounded-xl max-w-lg w-full p-6 relative">
+    <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-xl">&times;</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+AOS.init({ duration: 800, once: true });
+
+const modalData = {
+  izinUsaha: `
+    <div class="flex flex-col items-center gap-4">
+      <i class="fas fa-file-alt text-6xl text-blue-700"></i>
+      <h2 class="text-xl font-bold mb-2">Izin Usaha</h2>
+      <p>Pelayanan pembuatan izin usaha berbasis digital, cepat, dan sesuai regulasi pemerintah.</p>
+      <ul class="list-disc list-inside mt-2">
+        <li>Fotokopi KTP</li>
+        <li>NPWP (jika ada)</li>
+        <li>Proposal usaha / rencana bisnis</li>
+      </ul>
+      <a href="https://oss.go.id" target="_blank" class="text-blue-700 mt-2 inline-block hover:underline">Ajukan Izin Usaha di OSS</a>
+    </div>
+  `,
+  izinLingkungan: `
+    <div class="flex flex-col items-center gap-4">
+      <i class="fas fa-file-signature text-6xl text-blue-700"></i>
+      <h2 class="text-xl font-bold mb-2">Izin Lingkungan</h2>
+      <p>Monitoring dan pengajuan izin lingkungan sesuai regulasi daerah.</p>
+      <ul class="list-disc list-inside mt-2">
+        <li>Dokumen AMDAL / UKL-UPL</li>
+        <li>Fotokopi izin usaha terkait</li>
+      </ul>
+      <a href="https://oss.go.id" target="_blank" class="text-blue-700 mt-2 inline-block hover:underline">Ajukan Izin Lingkungan di OSS</a>
+    </div>
+  `,
+  izinNonUsaha: `
+    <div class="flex flex-col items-center gap-4">
+      <i class="fas fa-file-invoice text-6xl text-blue-700"></i>
+      <h2 class="text-xl font-bold mb-2">Izin Non-Usaha</h2>
+      <p>Pelayanan izin untuk kegiatan sosial, non-komersial, dan kegiatan pemerintah lainnya.</p>
+      <ul class="list-disc list-inside mt-2">
+        <li>Surat permohonan resmi</li>
+        <li>Fotokopi identitas pemohon</li>
+      </ul>
+      <a href="https://wa.me/6281386824618" target="_blank" class="text-green-700 mt-2 inline-block hover:underline">Ajukan Izin Non-Usaha via WA DPMPTSP</a>
+    </div>
+  `,
+  promosiInvestasi: `
+    <div class="flex flex-col items-center gap-4">
+      <i class="fas fa-chart-line text-6xl text-blue-700"></i>
+      <h2 class="text-xl font-bold mb-2">Promosi Investasi</h2>
+      <p>Memberikan informasi peluang investasi di Kabupaten Maluku Tenggara.</p>
+      <a href="https://wa.me/6281386824618?text=Halo%20DPMPTSP,%20saya%20ingin%20mendapatkan%20informasi%20tentang%20Promosi%20Investasi" target="_blank" class="text-green-700 mt-2 inline-block hover:underline">Hubungi via WA untuk Promosi Investasi</a>
+    </div>
+  `,
+  kemitraanInvestor: `
+    <div class="flex flex-col items-center gap-4">
+      <i class="fas fa-handshake text-6xl text-blue-700"></i>
+      <h2 class="text-xl font-bold mb-2">Kemitraan Investor</h2>
+      <p>Fasilitasi kerjasama antara investor dan pelaku usaha lokal.</p>
+      <a href="https://wa.me/6281386824618?text=Halo%20DPMPTSP,%20saya%20ingin%20mendaftar%20Kemitraan%20Investor" target="_blank" class="text-green-700 mt-2 inline-block hover:underline">Hubungi via WA untuk Kemitraan Investor</a>
+    </div>
+  `,
+  pengawasanInvestasi: `
+    <div class="flex flex-col items-center gap-4">
+      <i class="fas fa-globe text-6xl text-blue-700"></i>
+      <h2 class="text-xl font-bold mb-2">Pengawasan Investasi</h2>
+      <p>Monitoring dan evaluasi kegiatan investasi agar sesuai regulasi dan tujuan daerah.</p>
+      <a href="#" class="text-blue-700 mt-2 inline-block hover:underline">Pantau Investasi</a>
+    </div>
+  `
+};
+
+function openModal(key) {
+  document.getElementById('modalContent').innerHTML = modalData[key];
+  document.getElementById('modalContainer').classList.remove('hidden');
+  document.getElementById('modalContainer').classList.add('flex');
+}
+
+function closeModal() {
+  document.getElementById('modalContainer').classList.add('hidden');
+  document.getElementById('modalContainer').classList.remove('flex');
+}
+</script>
+
+</body>
+</html>

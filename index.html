@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DPMPTSP Kabupaten Maluku Tenggara</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif}
+
+body{
+  background:#f4f7fa;
+  color:#002b5b;
+}
+
+/* TOP CONTACT */
+.contact-top{
+  background:#003366;
+  color:#fff;
+  text-align:center;
+  padding:8px;
+  font-size:14px;
+}
+
+/* HEADER */
+header{
+  background:#fff;
+  padding:10px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:3px solid #0055aa;
+}
+
+.logo-left{width:250px;height:100px;object-fit:contain}
+.logo-right{width:85px;height:85px;object-fit:contain}
+
+.header-text{text-align:center;flex:1}
+.header-text h1{font-size:26px;color:#004080}
+.header-text p{font-size:14px;color:#0077cc;font-style:italic}
+
+/* NAV */
+nav{
+  background:#0077cc;
+  text-align:center;
+}
+nav a{
+  color:#fff;
+  padding:12px 20px;
+  text-decoration:none;
+  display:inline-block;
+}
+nav a:hover{background:#005fa3}
+
+/* SLIDESHOW */
+.slideshow-container{
+  height:500px;
+  overflow:hidden;
+  position:relative;
+}
+
+.slideshow-track{
+  display:flex;
+  width:200%;
+  animation:slide 60s linear infinite;
+}
+.slideshow-track img{
+  width:100%;
+  height:500px;
+  object-fit:cover;
+}
+
+@keyframes slide{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+
+.overlay-box{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(0,51,102,.7);
+  color:#fff;
+  padding:12px 25px;
+  border-radius:10px;
+  text-align:center;
+  z-index:3;
+}
+.welcome-text{top:30px;font-size:22px}
+.caption-bar{bottom:30px;font-size:18px}
+
+.cta-button{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 20px;
+  background:#0077cc;
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+}
+
+/* ===== BACKGROUND SECTION ===== */
+.bg-section{
+  background:url("images/ptspal.jpeg") center/cover no-repeat fixed;
+  position:relative;
+  padding:80px 10%;
+}
+
+.bg-overlay{
+  background:rgba(0,32,64,.85);
+  padding:60px 40px;
+  border-radius:20px;
+  color:#fff;
+}
+
+/* CONTENT */
+.bg-overlay h2{
+  text-align:center;
+  margin-bottom:20px;
+  color:#ffdd00;
+}
+
+.bg-overlay p{
+  line-height:1.8;
+  text-align:center;
+  max-width:900px;
+  margin:auto;
+}
+
+/* STAT TABLE */
+.stat-table{
+  margin:40px auto;
+  border-collapse:collapse;
+  background:#fff;
+  color:#002b5b;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.stat-table th{
+  background:#004080;
+  color:#fff;
+  padding:12px 25px;
+}
+
+.stat-table td{
+  padding:10px 25px;
+  border-bottom:1px solid #ddd;
+}
+
+/* PENGUMUMAN */
+#pengumuman-container{
+  list-style:none;
+  margin-top:30px;
+}
+
+#pengumuman-container li{
+  background:#fff;
+  color:#002b5b;
+  padding:12px 15px;
+  border-left:5px solid #0077cc;
+  border-radius:8px;
+  margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+  background:#004080;
+  color:#fff;
+  text-align:center;
+  padding:25px 10px;
+}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{color:#ffdd00}
+
+/* HELP DESK */
+.helpdesk-btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:70px;
+  z-index:9999;
+  animation:pulse 2s infinite;
+}
+.helpdesk-btn img{
+  width:100%;
+  border-radius:50%;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.07)}
+  100%{transform:scale(1)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="contact-top">
+📍 Jl. Merdeka Raya Watdek | ☎ (0916) 21045 | ✉ dpmptspkabupatenmalukutenggara@gmail.com
+</div>
+
+<header>
+  <img src="images/logo_kementerian.png" class="logo-left">
+  <div class="header-text">
+    <h1>Dinas Penanaman Modal dan PTSP</h1>
+    <p>Kabupaten Maluku Tenggara – Mudah • Cepat • Transparan</p>
+  </div>
+  <img src="images/logo_malra.png" class="logo-right">
+</header>
+
+<nav>
+  <a href="index.html">Beranda</a>
+  <a href="profil.html">Profil</a>
+  <a href="layanan.html">Layanan</a>
+  <a href="https://oss.go.id" target="_blank">OSS</a>
+  <a href="berita.html">Berita</a>
+  
+</nav>
+
+</nav>
+
+<div class="slideshow-container">
+  <div class="overlay-box welcome-text">Selamat Datang di Website Resmi</div>
+  <div class="slideshow-track">
+    <img src="images/pantai_ngurbloat.jpg">
+    <img src="images/mutiara.jpg">
+    <img src="images/ikan.jpg">
+    <img src="images/rumput_laut.jpg">
+    <img src="images/pasir_timbul.jpg">
+    <img src="images/pantai_ngurbloat.jpg">
+    <img src="images/mutiara.jpg">
+    <img src="images/ikan.jpg">
+    <img src="images/rumput_laut.jpg">
+    <img src="images/pasir_timbul.jpg">
+  </div>
+  <div class="overlay-box caption-bar">
+    Potensi Investasi Unggulan Maluku Tenggara<br>
+    <a class="cta-button" href="#">Ajukan Izin Sekarang</a>
+  </div>
+</div>
+
+<!-- BACKGROUND CONTENT -->
+<section class="bg-section">
+  <div class="bg-overlay">
+
+    <h2>Tentang DPMPTSP</h2>
+    <p>
+      DPMPTSP Kabupaten Maluku Tenggara menyelenggarakan pelayanan perizinan
+      dan non-perizinan secara terpadu, profesional, transparan dan akuntabel
+      guna mendukung peningkatan investasi daerah.
+    </p>
+
+    <table class="stat-table">
+      <tr><th>Sektor</th><th>Nilai Investasi</th></tr>
+      <tr><td>Perikanan</td><td>Rp 12,4 Miliar</td></tr>
+      <tr><td>Pariwisata</td><td>Rp 8,7 Miliar</td></tr>
+      <tr><td>UMKM</td><td>Rp 5,3 Miliar</td></tr>
+    </table>
+
+    <h2>Pengumuman Terbaru</h2>
+    <ul id="pengumuman-container">
+      <li>📢 Jadwal pelayanan OSS diperpanjang hingga 16.30 WIT</li>
+      <li>📄 Pendaftaran izin rumput laut sampai 30 November 2025</li>
+      <li>💡 Forum Investasi 2025 akan dilaksanakan di Langgur</li>
+    </ul>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 DPMPTSP Kabupaten Maluku Tenggara</p>
+  <p>
+    <a href="mailto:dpmptspkabupatenmalukutennggara@gmail.com">Email</a> |
+    <a href="https://www.facebook.com/search/top?q=Dinas%20PMPTSP%20Maluku%20Tenggara" target="_blank">Facebook</a> |
